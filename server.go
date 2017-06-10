@@ -21,7 +21,7 @@ func handleDefault(responseWriter http.ResponseWriter, request *http.Request) {
 }
 
 func main() {
-    http.HandleFunc("/", sayhelloName)
+    http.HandleFunc("/", handleDefault)
     err := http.ListenAndServe(":9090", nil)
     if err != nil {
         log.Fatal("ListenAndServe: ", err)
